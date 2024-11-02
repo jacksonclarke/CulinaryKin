@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %} {% block title %} {{ title }} {% endblock %} 
+{% load static %}
+{% block content %}
+<section class="bg-white dark:bg-gray-900">
+    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Sorry we are still under construction!</h2>
+            <p class="mb-4">We are working to get the rest of the site built. Thank you for signing up and we will keep you updated
+                with the progress of the site.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 mt-8">
+            <img class="w-full rounded-lg" src="{% static 'Underconstruction.svg'%}" alt="office content 1">
+        </div>
+    </div>
+</section>
+{% endblock %}

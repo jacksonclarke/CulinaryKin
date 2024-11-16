@@ -14,7 +14,8 @@ The server will then start and notify you in the terminal that it has started. A
 The purpose of CulinaryKin is to help prevent the loss of family recipes, as well as to provide a safe place to store and share recipes. 
 
 
-[Demo Video](https://youtu.be/NmktbefnGeA)
+[Demo Video Part 1](https://youtu.be/NmktbefnGeA)
+[Demo Video Part 2](https://youtu.be/duER3VXVTrc)
 
 # Web Pages
 
@@ -28,6 +29,8 @@ dynamicaly fill in page content. The navigation bar at the top dynamicaly change
 **Landing Page:** The temporary landing page uses the base template and dynamically changes the navigation bar since the user is signed in.
 The user can then hover over the profile image and signout which will signout the user and return them to the home page.
 
+# Relational Database
+The project uses a relational database to connect the users auth information with their profile, and their profile with their recipes and recipe books.
 
 # Development Environment
 
@@ -42,8 +45,7 @@ The main programming languages used in this project are Python v3.12, HTML, CSS,
 
 # Future Work
 
-* Recipe CRUD
 * Recipe book sharing
-* Ability to reset password
+* Recipe viewing pages
 * Mobile app integration
-* Profile settings
+* Finish UI development.

@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+    <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">
+      Share Recipe Book: {{ recipe_book.name }}
+    </h2>
+    <p class="mb-4 text-gray-900 dark:text-white">
+      Share this link with others to let them view this recipe book:
+    </p>
+    <input type="text" value="{{ share_link }}" readonly class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 mb-4">
+    
+    <form method="post">
+      {% csrf_token %}
+      <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter username to add a user to this recipe book:</label>
+      <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 mb-4" required>
+      <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Share</button>
+    </form>
+    
+    {% if message %}
+      <p class="mt-4 text-green-500">{{ message }}</p>
+    {% endif %}
+    {% if error %}
+      <p class="mt-4 text-red-500">{{ error }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

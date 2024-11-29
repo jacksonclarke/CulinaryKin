@@ -16,7 +16,7 @@ The purpose of CulinaryKin is to help prevent the loss of family recipes, as wel
 
 [Demo Video Part 1](https://youtu.be/NmktbefnGeA)
 [Demo Video Part 2](https://youtu.be/duER3VXVTrc)
-
+[Demo Video Part 3](https://youtu.be/arlG-1-05EY)
 # Web Pages
 
 **Home Page:** The home page has the hero image, the name of the app, and links to the login and register pages. The pages use a base template and 
@@ -45,7 +45,8 @@ The main programming languages used in this project are Python v3.12, HTML, CSS,
 
 # Future Work
 
-* Recipe book sharing
-* Recipe viewing pages
+* Landing page
+* Improve UI
+* Host server
 * Mobile app integration
-* Finish UI development.
+  

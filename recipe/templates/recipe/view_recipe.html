@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+    <h1 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">
+      {{ recipe.name }}
+    </h1>
+    <h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white">Ingredients</h3>
+    <ul class="mb-4 text-gray-900 dark:text-white">
+      <p class="text-gray-900 dark:text-white">
+      {{ recipe.ingredients }}
+    </p>
+    <h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white">Instructions</h3>
+    <p class="text-gray-900 dark:text-white">
+      {{ recipe.instructions }}
+    </p>
+    <p class="text-gray-900 dark:text-white">
+      Created By: {{ recipe.created_by }}
+    </p>
+    {% if user == recipe.created_by or user == recipe.recipebook_set.first.owner %}
+      <form method="post" action="{% url 'recipe:delete_recipe' recipe.id %}">
+        {% csrf_token %}
+        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          Delete Recipe
+        </button>
+      </form>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

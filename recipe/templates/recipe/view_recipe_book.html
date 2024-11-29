@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+    <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">
+      {{ recipe.name }}
+    </h2>
+    <h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white">Ingredients</h3>
+    <ul class="mb-4 text-gray-900 dark:text-white">
+      {% for ingredient in recipe.ingredients %}
+        <li>{{ ingredient }}</li>
+      {% endfor %}
+    </ul>
+    <h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white">Instructions</h3>
+    <p class="text-gray-900 dark:text-white">
+      {{ recipe.instructions }}
+    </p>
+  </div>
+</section>
+{% endblock %}
